@@ -98,7 +98,7 @@ const modifyPersonAge = (
     person.name === name ? { ...person, age: newAge } : person
   );
 
-const updatedPeople = modifyPersonAge(people, "John", 40);
+const updatedPeople = modifyPersonAge(people, "Touhid", 40);
 console.log(updatedPeople);
 // Output: [
 //   { name: "Touhid", age: 30, gender: "male" },
