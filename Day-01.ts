@@ -101,7 +101,7 @@ const modifyPersonAge = (
 const updatedPeople = modifyPersonAge(people, "Touhid", 40);
 console.log(updatedPeople);
 // Output: [
-//   { name: "Touhid", age: 30, gender: "male" },
+//   { name: "Touhid", age: 40, gender: "male" },
 //   { name: "Urmi", age: 25, gender: "female" },
 //   { name: "Toufik", age: 35, gender: "male" },
 //   { name: "Jannatul", age: 22, gender: "female" },
