@@ -43,5 +43,23 @@ console.log(countVowels("Happy New Year"));
 // Task-09: Unique Values
 // Create an array of numbers with some duplicate values. Write a function to filter out the duplicate values and return a new array with only unique numbers. Print the result.
 
+const uniqueNumbers = (numbers: number[]): number[] => {
+  return numbers.filter((num, index) => numbers.indexOf(num) === index);
+};
+
+// Example:
+const numbersWithDuplicates = [1, 2, 2, 3, 4, 4, 5];
+console.log(uniqueNumbers(numbersWithDuplicates));
+// Output: [1, 2, 3, 4, 5]
+
 // Task-10: Find Maximum Value:
 // Write a function that takes an array of numbers and returns the maximum value.
+
+const findMaxValue = (numbers: number[]): number => {
+  return Math.max(...numbers);
+};
+
+// Example usage:
+const arrayToFindMax = [10, 20, 30, 40, 5];
+console.log(findMaxValue(arrayToFindMax));
+// Output: 40

@@ -9,17 +9,18 @@ type TPerson = {
   gender: "male" | "female";
 };
 
+const filterAndMapMales = (people: TPerson[]): string[] =>
+  people
+    .filter((person) => person.gender === "male")
+    .map((person) => person.name);
+
+// Example:
 const people: TPerson[] = [
   { name: "Touhid", age: 30, gender: "male" },
   { name: "Urmi", age: 25, gender: "female" },
   { name: "Toufik", age: 35, gender: "male" },
   { name: "Jannatul", age: 22, gender: "female" },
 ];
-
-const filterAndMapMales = (people: TPerson[]): string[] =>
-  people
-    .filter((person) => person.gender === "male")
-    .map((person) => person.name);
 
 const maleNames = filterAndMapMales(people);
 console.log(maleNames);
@@ -34,14 +35,15 @@ type TBook = {
   year: number;
 };
 
+const getBookTitles = (books: TBook[]): string[] =>
+  books.map((book) => book.title);
+
+// Example:
 const books: TBook[] = [
   { title: "Programming with JS", author: "JavaScript", year: 2010 },
   { title: "Typescript Technocrat", author: "TypeScript", year: 2015 },
   { title: "Next Ninja", author: "Ninja Publishers", year: 2024 },
 ];
-
-const getBookTitles = (books: TBook[]): string[] =>
-  books.map((book) => book.title);
 
 const titles = getBookTitles(books);
 console.log(titles);
@@ -56,6 +58,7 @@ const addFive = (num: number): number => num + 5;
 
 const compose = (num: number): number => addFive(double(square(num)));
 
+// Example:
 const result = compose(3);
 console.log(result);
 // Output: 23 (3^2 = 9, 9*2 = 18, 18+5 = 23)
@@ -69,14 +72,15 @@ type TCar = {
   year: number;
 };
 
+const sortCarsByYear = (cars: TCar[]): TCar[] =>
+  cars.sort((a, b) => a.year - b.year);
+
+// Example:
 const cars: TCar[] = [
   { make: "Toyota", model: "Corolla", year: 2018 },
   { make: "Ford", model: "Mustang", year: 2015 },
   { make: "Tesla", model: "Model S", year: 2020 },
 ];
-
-const sortCarsByYear = (cars: TCar[]): TCar[] =>
-  cars.sort((a, b) => a.year - b.year);
 
 const sortedCars = sortCarsByYear(cars);
 console.log(sortedCars);
@@ -98,6 +102,7 @@ const modifyPersonAge = (
     person.name === name ? { ...person, age: newAge } : person
   );
 
+// Example:
 const updatedPeople = modifyPersonAge(people, "Touhid", 40);
 console.log(updatedPeople);
 // Output: [
