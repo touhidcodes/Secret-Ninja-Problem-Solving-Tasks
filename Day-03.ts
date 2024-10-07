@@ -8,11 +8,6 @@ type TStudent = {
   grades: number[];
 };
 
-type Student = {
-  name: string;
-  grades: number[];
-};
-
 const sortStudentsByAverageGrade = (students: TStudent[]): TStudent[] => {
   const studentsWithAverages = students.map((student) => ({
     ...student,
