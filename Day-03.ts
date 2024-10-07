@@ -1,4 +1,4 @@
-//  Day-02, 03 October, 2024
+//  Day-03, 03 October, 2024
 
 // Task-11: Advanced Sorting
 // Create an array of objects representing students with 'name' and 'grades' properties. Write a function to sort the students by average grade in descending order.
